@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\JoinPilotController;
 use App\Http\Controllers\Api\StayUpdatedController;
+use App\Http\Controllers\Api\HeroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ use App\Http\Controllers\Api\StayUpdatedController;
 // Public routes for form submissions
 Route::post('/join-pilot', [JoinPilotController::class, 'store']);
 Route::post('/stay-updated', [StayUpdatedController::class, 'store']);
+
+// Hero content route
+Route::get('/hero', [HeroController::class, 'getHeroByLang']);
 
 // Protected routes for admin access
 Route::middleware('auth:sanctum')->group(function () {

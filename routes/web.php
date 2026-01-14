@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HeroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,9 @@ Route::prefix('admin')->group(function () {
         Route::get('/stay-updated', [DashboardController::class, 'stayUpdated'])->name('admin.stay.updated');
         Route::delete('/join-pilots/{id}', [DashboardController::class, 'deleteJoinPilot'])->name('admin.join.pilot.delete');
         Route::delete('/stay-updated/{id}', [DashboardController::class, 'deleteStayUpdated'])->name('admin.stay.updated.delete');
+        
+        // Hero management routes
+        Route::get('/hero', [HeroController::class, 'index'])->name('admin.hero.index');
+        Route::post('/hero', [HeroController::class, 'store'])->name('admin.hero.store');
     });
 });

@@ -41,6 +41,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-light {{ request()->is('admin/hero') ? 'bg-warning text-dark' : '' }}" href="/admin/hero">
+                            <i class="fas fa-star me-2"></i>Hero Management
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-light {{ request()->is('admin/join-pilots') ? 'bg-warning text-dark' : '' }}" href="/admin/join-pilots">
                             <i class="fas fa-users me-2"></i>Join Pilot
                         </a>

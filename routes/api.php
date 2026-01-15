@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\JoinPilotController;
 use App\Http\Controllers\Api\StayUpdatedController;
 use App\Http\Controllers\Api\HeroController;
+use App\Http\Controllers\Api\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,9 @@ Route::post('/stay-updated', [StayUpdatedController::class, 'store']);
 
 // Hero content route
 Route::get('/hero', [HeroController::class, 'getHeroByLang']);
+
+// About Us content route
+Route::get('/about-us', [AboutUsController::class, 'getAboutByLang']);
 
 // Protected routes for admin access
 Route::middleware('auth:sanctum')->group(function () {

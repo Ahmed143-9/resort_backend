@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +36,9 @@ Route::prefix('admin')->group(function () {
         // Hero management routes
         Route::get('/hero', [HeroController::class, 'index'])->name('admin.hero.index');
         Route::post('/hero', [HeroController::class, 'store'])->name('admin.hero.store');
+        
+        // About Us management routes
+        Route::get('/about-us', [AboutUsController::class, 'index'])->name('admin.about.us.index');
+        Route::post('/about-us', [AboutUsController::class, 'update'])->name('admin.about.us.update');
     });
 });

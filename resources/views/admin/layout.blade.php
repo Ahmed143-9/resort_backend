@@ -46,6 +46,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-light {{ request()->is('admin/about-us') ? 'bg-warning text-dark' : '' }}" href="/admin/about-us">
+                            <i class="fas fa-info-circle me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-light {{ request()->is('admin/join-pilots') ? 'bg-warning text-dark' : '' }}" href="/admin/join-pilots">
                             <i class="fas fa-users me-2"></i>Join Pilot
                         </a>

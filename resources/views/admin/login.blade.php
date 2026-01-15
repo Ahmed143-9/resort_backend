@@ -60,10 +60,10 @@
                             </button>
                         </form>
                         
-                        <div class="text-center mt-4">
+                        {{-- <div class="text-center mt-4">
                             <p class="text-muted small mb-0">Default credentials:</p>
                             <p class="text-muted small mb-0">Username: <code>admin</code> | Password: <code>admin123</code></p>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
